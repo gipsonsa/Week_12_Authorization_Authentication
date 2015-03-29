@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :characters
+
   # get 'static/home'
   root 'static#home'
 
