@@ -24,14 +24,17 @@
         <td><%= character.weight %></td>
         <td><%= character.lifespan %></td>
         <td><%= character.race %></td>
-        <td><%= link_to 'Show', character %></td>
-        <td><%= link_to 'Edit', edit_character_path(character) %></td>
-        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Show', character %></td>
+          <td><%= link_to 'Edit', edit_character_path(character) %></td>
+          <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'New Character', new_character_path %></td>
+        <% else %>
+          <td><%= link_to 'Show', character %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Character', new_character_path %>
