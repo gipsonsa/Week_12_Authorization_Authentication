@@ -6,7 +6,8 @@ body {
   background-color: #FFBA74;
 }
 
-a {
+a,
+li a {
   text-decoration: none;
   color: white;
   background-color: #00536C;
@@ -33,4 +34,5 @@ ul {
 li {
   float: left;
   padding-left: none;
+  list-style: none;
 }

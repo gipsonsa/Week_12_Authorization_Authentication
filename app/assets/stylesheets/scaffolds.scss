@@ -32,6 +32,7 @@ a {
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+    width: 500px;
   }
 }
 
@@ -63,7 +64,14 @@ div {
     color: #fff;
   }
   ul li {
-    font-size: 12px;
+    font-size: 16px;
     list-style: square;
+    margin-left: 37px;
+    padding: 8px;
+    text-decoration: underline;
   }
+}
+
+td {
+  margin: 10px;
 }
